@@ -9,14 +9,14 @@ interface ContainerProps {
 const Container = ({
   children,
   gutter = false,
-  maxWidth = 'auto', // Default maxWidth is 'lg'
+  maxWidth = 'xl', // Default maxWidth is 'lg'
 }: ContainerProps) => {
   const maxWidthClass = {
     xs: 'max-w-xs',
     sm: 'max-w-sm',
     md: 'max-w-md',
     lg: 'max-w-lg',
-    xl: 'max-w-xl',
+    xl: 'max-w-7xl',
     full: 'max-w-full',
     auto: 'max-w-auto',
   }[maxWidth];

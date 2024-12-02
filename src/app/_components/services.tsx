@@ -1,23 +1,19 @@
+import Container from "@/components/core/container";
+import Typography from "@/components/core/typography";
+
 const Services = () => {
     return (
-      <section className="hero min-h-screen bg-base-200" id="services">
-        <div className="hero-content text-center">
+      <section className="min-h-screen bg-white" id="services">
+        <Container>
           <div className="max-w-md">
-            <h1 className="text-5xl font-bold">
-              <span className="text-primary">Hello</span> World
-            </h1>
-            <p className="py-6 text-xl">
-              This is a simple starter template for a blog powered by{" "}
-              <a
-                href="https://nextjs.org/"
-                className="text-primary underline hover:text-secondary"
-              >
-                Next.js
-              </a>
-              .
-            </p>
+            <Typography variant="h1">
+              LEGASI LAW FIRM 
+            </Typography>
+            <Typography variant="h2" className="text-secondary">
+              Real Estate Specialist
+            </Typography>
           </div>
-        </div>
+        </Container>
       </section>
     );
   };  

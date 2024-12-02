@@ -1,18 +1,32 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/organisme/header";
+import { Bellefair, Gabarito } from 'next/font/google'
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+
+export const bellefair = Bellefair({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: "400",
+  variable: '--font-family-bellefair',
+})
+ 
+export const gabarito = Gabarito({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-family-gabarito',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,8 +40,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="lawfirm">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+       {/* <style jsx global>{`
+          html {
+            font-family: ${gabarito.style.fontFamily};
+          }
+          
+          h1 {
+            font-family:  ${bellefair.style.fontFamily};
+          }
+        `}</style> */}
+        <body
+        className={`${bellefair.className} ${gabarito.className} antialiased`}
       >
         <Header />
         {children}
