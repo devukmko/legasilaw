@@ -1,3 +1,4 @@
+import React from 'react';
 import { ColorsNames } from '../../../themes/type'
 
 export type ButtonVariant = 'contained' | 'outlined' | 'text'
@@ -17,4 +18,6 @@ export interface Props {
   disabled?: boolean;
   /** Add description for color */
   color?: ButtonColor;
+  /** Add custom className */
+  className?: React.ComponentProps<'div'>['className'];
 }

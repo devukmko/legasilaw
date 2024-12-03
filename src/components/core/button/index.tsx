@@ -20,7 +20,8 @@ const Button: ComponentType<Props> = ({
   disabled,
   size = 'medium',
   variant = 'contained',
-  color = 'primary'
+  color = 'primary',
+  className,
 }) => {
   let colorStyle = '';
   if (color && variant === 'contained') {
@@ -33,7 +34,7 @@ const Button: ComponentType<Props> = ({
 
   return (
     <button
-      className={mergeStyle(VARIANT_STYLES[variant], SIZE_STYLES[size], colorStyle)}
+      className={mergeStyle(VARIANT_STYLES[variant], SIZE_STYLES[size], colorStyle, className)}
       onClick={onClick}
       disabled={disabled}
     >

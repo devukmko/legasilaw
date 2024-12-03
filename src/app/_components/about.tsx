@@ -25,7 +25,7 @@ const AboutUs = () => {
   <div className="relative z-10 py-10 bg-neutral-content text-neutral-content">
     <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
       <div className="text-center">
-        <h3 className="text-2xl font-bold">Puja Jannatun'im, S.H.</h3>
+        <h3 className="text-2xl font-bold">Puja Jannatun&lsquo;im, S.H.</h3>
         <p>Abadikan dan tuntaskan hukum properti.</p>
       </div>
       <div className="text-center">
