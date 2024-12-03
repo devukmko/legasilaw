@@ -6,7 +6,7 @@ import { mergeStyle } from "@/utils/styles"
 import { bellefair, gabarito } from '@/themes/fonts'
 
 interface Props extends HTMLAttributes<HTMLHeadingElement> {
-  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2'
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2' | 'subtitle'
   fontWeight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold'
 }
 
@@ -41,6 +41,11 @@ export const Typography = forwardRef<HTMLHeadingElement, Props>(
       case 'h6':
         Element = 'h6'
         style = "text-base"
+        break
+      case 'subtitle': 
+        Element = 'h3'
+        style = `text-3xl ${gabarito.className} `
+
         break
       case 'body1':
         style = `text-base ${gabarito.className}`

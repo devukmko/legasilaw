@@ -2,6 +2,7 @@
 // import Container from "@/components/core/container";
 import Hero from "./_components/hero";
 import Services from "./_components/services";
+import AboutUs from "./_components/about-us";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Button> */}
       <Hero />
       <Services />
+      <AboutUs />
     </main>
   );
 }
