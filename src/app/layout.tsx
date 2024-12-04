@@ -2,31 +2,7 @@ import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/organisme/header";
-import { Bellefair, Gabarito } from 'next/font/google'
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
-export const bellefair = Bellefair({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: "400",
-  variable: '--font-family-bellefair',
-})
- 
-export const gabarito = Gabarito({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-family-gabarito',
-})
+import { bellefair, gabarito } from '@/themes/fonts'
 
 export const metadata: Metadata = {
   title: "Create Next App",
