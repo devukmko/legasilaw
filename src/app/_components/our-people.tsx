@@ -13,7 +13,7 @@ const OurPeople = () => {
                 Apapun masalah properti Anda
                 Konsultasikan dengan Kami
               </Typography>
-              <div className="flex justify-center xl:justify-start">
+              <div className="flex justify-center md:justify-start">
                 <Button
                   // href="https://wa.me/your-number"
                   // target="_blank"
@@ -35,8 +35,8 @@ const OurPeople = () => {
             </div>
             <div className="flex-1 flex flex-col md:flex-row items-end justify-end gap-4">
               <div className="flex-1 flex flex-col gap-4">
-                <Image src="/images/frame1.png" fill alt="frame1" />
-                <Typography variant="body1" className="text-white">
+                <Image src="/images/frame1.png" fill alt="frame1" ratio="145/146" style={{ aspectRatio: '145/146' }} />
+                <Typography variant="body1" className="text-secondary" style={{ fontSize: '1.25rem',  fontWeight: 600 }}>
                   Puja Jannatunna’im, S.H.
                 </Typography>
                 <Typography variant="body2" className="text-white">
@@ -44,8 +44,8 @@ const OurPeople = () => {
                 </Typography>
               </div>
               <div className="flex-1 flex flex-col gap-4">
-                <Image src="/images/frame2.png" fill alt="frame1" />
-                <Typography variant="body1" className="text-white">
+                <Image src="/images/frame2.png" fill alt="frame1" ratio="145/146" style={{ aspectRatio: '145/146' }}/>
+                <Typography variant="body1" className="text-secondary"  style={{ fontSize: '1.25rem', fontWeight: 600 }}>
                   Marthinus Nelson Rabin
                 </Typography>
                 <Typography variant="body2" className="text-white">
