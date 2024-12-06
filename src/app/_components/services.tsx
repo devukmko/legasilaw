@@ -7,7 +7,7 @@ const ServiceCard: React.FC<{ title: string; image: string }> = ({ title, image 
   return (
     // Ensure the hover class applies to the correct element
     <div className="shadow-md rounded-lg overflow-hidden group transition-shadow duration-300 hover:shadow-2xl cursor-pointer">
-      <Image src={image} alt="Services 1" fill className="aspect-square" />
+      <Image src={image} alt="Services 1" fill className="aspect-square" style={{ aspectRatio: '64/53' }} />
       <div className="text-left p-4 bg-secondary flex-row flex">
         <Typography variant="h2" className="text-white flex-1">
           {title}
