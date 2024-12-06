@@ -4,7 +4,7 @@ import Contact from "./contact";
 
 const AboutContact = () => {
   return (
-    <div className="relative min-h-screen  overflow-hidden bg-neutral z-20">  
+    <div className="relative min-h-screen  overflow-hidden bg-neutral z-10">  
       <Image
         src="/images/vector1.png"
         alt="vector1"

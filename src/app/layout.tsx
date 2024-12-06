@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/organisme/header";
 import { bellefair, gabarito } from '@/themes/fonts'
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${bellefair.className} ${gabarito.className} antialiased`}
       >
         <Header />
+        <Toaster />
         {children}
       </body>
     </html>

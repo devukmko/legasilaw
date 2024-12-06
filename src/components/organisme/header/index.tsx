@@ -31,13 +31,12 @@ const Header = () => {
 
   return (
     <div
-      className={`navbar bg-base-100 fixed top-0 z-50 transition-transform ${
+      className={`navbar bg-base-100 fixed top-0 z-20 transition-transform ${
         isAtTop ? "-translate-y-full" : "translate-y-0 shadow-md"
       }`}
     >
       <Container>
         <div className="lg:flex flex-1">
-          {/* Logo for Desktop */}
           <a
             href="#"
             onClick={(e) => {
@@ -71,7 +70,7 @@ const Header = () => {
             <MenuItems
               anchor="bottom"
               transition
-              className="origin-top w-40 transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 z-auto bg-white shadow-lg"
+              className="origin-top w-40 transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 z-50 bg-white shadow-lg"
             >
               {[
                 { href: "#about-us", label: "About Us" },
@@ -104,7 +103,6 @@ const Header = () => {
         </div>
 
         <div className="flex-none hidden lg:flex">
-          {/* Navigation Links */}
           <ul className="menu menu-horizontal px-1">
             {[
               { href: "#about-us", label: "About Us" },
