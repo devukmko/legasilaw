@@ -57,6 +57,7 @@ const Contact = () => {
   };
 
   return (
+    <section className="pb-10" id="contact">
     <Container gutter>
       <div className="relative z-10 py-10">
         <div className="container mx-auto px-6 md:px-12 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -315,6 +316,7 @@ const Contact = () => {
         </div>
       </div>
     </Container>
+    </section >
   );
 };
 

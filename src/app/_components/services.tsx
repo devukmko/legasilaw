@@ -37,7 +37,7 @@ const ServiceCard: React.FC<{ title: string; image: string }> = ({ title, image 
 
 const Services = () => {
   return (
-    <section className="bg-white pb-10" id="services">
+    <section className="bg-white pb-10 pt-10" id="services">
       <Container gutter>
         <div className="gap-8 flex-col flex">
           <div className="max-w">
