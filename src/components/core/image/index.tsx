@@ -22,7 +22,7 @@ export const Image: React.FC<CustomImageProps> = ({
   ...props
 }) => {
   return (
-    <div className={`relative w-full aspect-[1/1] ${className}`}>
+    <div className={`relative w-full aspect-[64/53] ${className}`}>
       <NextImage
         src={src || '/images/no-image.jpg'}
         alt={alt || src}
