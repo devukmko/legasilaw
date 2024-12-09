@@ -42,27 +42,29 @@ const Contact = () => {
   });
 
   const onSubmit = (data: ContactFormValues) => {
-    console.log("Form Data:", data);
+    
     return toast.promise(createFeedback({
       email: data.email,
       fullname: data.name,
       message: data.message,
       phoneNumber: data.phone,
     }), {
-      success: "Success!",
+      success: "Successfully inserted feedback!",
       error: "Error! :(",
-      loading: null
+      loading: 'Processing...',
     }, {
-      duration: 4000,
-      position: "top-center",
-      style: {
-        background: "#4caf50",
-        color: "#fff",
-        borderRadius: "8px",
-        padding: "16px",
-        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-      },
-      icon: "✅",
+      success: {
+        duration: 4000,
+        position: "top-center",
+        style: {
+          background: "#4caf50",
+          color: "#fff",
+          borderRadius: "8px",
+          padding: "16px",
+          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+        },
+        icon: "✅",
+        }
     });
   };
 

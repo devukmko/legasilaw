@@ -1,9 +1,13 @@
 import { create } from 'apisauce'
 
-const BASE_URL = 'https://dashboard.legasilaw.com/'
+// TODO: Move to env
+const BASE_URL = process.env.BASE_URL || 'http://localhost:3000'
 
 // define the api
 export const api = create({
   baseURL: BASE_URL,
-  headers: { Accept: 'application/vnd.github.v3+json' },
+   headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
 })
