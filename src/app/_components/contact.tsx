@@ -7,6 +7,7 @@ import Container from "@/components/core/container";
 import Image from "next/image";
 import Typography from "@/components/core/typography";
 import toast from "react-hot-toast";
+import { createFeedback } from "@/libs/feedback";
 
 // Zod Schema for validation
 const contactSchema = z.object({
@@ -42,7 +43,16 @@ const Contact = () => {
 
   const onSubmit = (data: ContactFormValues) => {
     console.log("Form Data:", data);
-    toast.success("Pesan berhasil dikirim!", {
+    return toast.promise(createFeedback({
+      email: data.email,
+      fullname: data.name,
+      message: data.message,
+      phoneNumber: data.phone,
+    }), {
+      success: "Success!",
+      error: "Error! :(",
+      loading: null
+    }, {
       duration: 4000,
       position: "top-center",
       style: {
