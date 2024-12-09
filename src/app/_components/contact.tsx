@@ -31,6 +31,7 @@ const Contact = () => {
     handleSubmit,
     control,
     formState: { errors },
+    reset,
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -65,6 +66,8 @@ const Contact = () => {
         },
         icon: "✅",
         }
+    }).then(() => {
+      reset()
     });
   };
 
