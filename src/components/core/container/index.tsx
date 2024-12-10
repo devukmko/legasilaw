@@ -23,7 +23,7 @@ const Container = ({
 
   return (
     <div
-      className={`container relative mx-auto px-4 ${
+      className={`container relative mx-auto px-1 md:px-4 ${
         gutter ? 'py-6' : ''
       } ${maxWidthClass}`}
     >
