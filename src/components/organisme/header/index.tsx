@@ -47,8 +47,8 @@ const Header = () => {
     >
       <Container>
         <div className="lg:flex flex-1">
-          <a
-            href="#"
+          <Link
+            href="/#"
             onClick={(e) => {
               router.push("/#");
               e.preventDefault();
@@ -57,7 +57,7 @@ const Header = () => {
             }}
           >
             <Logo src="/logo.svg" alt="Logo" width={80} height={40} />
-          </a>
+          </Link>
         </div>
 
         <div className="flex-none md:hidden">
