@@ -85,7 +85,7 @@ const PerizinanPage = () => {
               variant="h1"
               className="text-center text-secondary md:text-left"
             >
-              Advokasi
+              Perizinan
             </Typography>
           </div>
           <Typography
