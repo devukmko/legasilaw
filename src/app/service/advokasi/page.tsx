@@ -1,6 +1,35 @@
 import Container from "@/components/core/container";
 import Typography from "@/components/core/typography";
 
+export const metadata = {
+  title: "Advokasi Properti - Penyelesaian Sengketa dan Konsultasi",
+  description:
+    "Tim Advokasi kami berkomitmen membantu menyelesaikan sengketa properti klien dan memberikan pemahaman komprehensif terkait transaksi properti yang dihadapi.",
+  openGraph: {
+    title: "Advokasi Properti - Penyelesaian Sengketa dan Konsultasi",
+    description:
+      "Tim Advokasi kami berkomitmen membantu menyelesaikan sengketa properti klien dan memberikan pemahaman komprehensif terkait transaksi properti yang dihadapi.",
+    url: "https://www.legasilaw.com/service/advokasi",
+    type: "website",
+    images: [
+      {
+        url: "/images/bg-services.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Background image for Advokasi Properti",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Advokasi Properti - Penyelesaian Sengketa dan Konsultasi",
+    description:
+      "Tim Advokasi kami berkomitmen membantu menyelesaikan sengketa properti klien dan memberikan pemahaman komprehensif terkait transaksi properti yang dihadapi.",
+    images: ["/images/bg-services.jpg"],
+  },
+};
+
+
 const AdvokasiIcon = () => {
   return (
     <svg

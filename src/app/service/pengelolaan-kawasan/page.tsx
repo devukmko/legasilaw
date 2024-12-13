@@ -1,6 +1,34 @@
 import Container from "@/components/core/container";
 import Typography from "@/components/core/typography";
 
+export const metadata = {
+  title: "Pengelolaan Kawasan - Konsultasi dan Layanan Properti",
+  description:
+    "Kami memberikan layanan komprehensif dari perencanaan hingga pengelolaan proyek properti operasional, membantu pengembang properti pemula dengan arahan dan koneksi layanan pendukung.",
+  openGraph: {
+    title: "Pengelolaan Kawasan - Konsultasi dan Layanan Properti",
+    description:
+      "Kami memberikan layanan komprehensif dari perencanaan hingga pengelolaan proyek properti operasional, membantu pengembang properti pemula dengan arahan dan koneksi layanan pendukung.",
+    url: "https://www.legasilaw.com/service/pengelolaan-kawasan",
+    type: "website",
+    images: [
+      {
+        url: "/images/bg-services.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pengelolaan Kawasan Properti",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pengelolaan Kawasan - Konsultasi dan Layanan Properti",
+    description:
+      "Kami memberikan layanan komprehensif dari perencanaan hingga pengelolaan proyek properti operasional, membantu pengembang properti pemula dengan arahan dan koneksi layanan pendukung.",
+    images: ["/images/bg-services.jpg"],
+  },
+};
+
 const PengelolaanKawasanIcon = () => {
   return (
     <svg

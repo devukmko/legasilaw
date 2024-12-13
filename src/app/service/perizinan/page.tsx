@@ -1,6 +1,35 @@
 import Container from "@/components/core/container";
 import Typography from "@/components/core/typography";
 
+export const metadata = {
+  title: "Perizinan - Legalitas Proyek Properti dan Konstruksi",
+  description:
+    "Kami membantu klien menangani legalitas perizinan proyek properti perumahan, apartemen, komersial, dan industri, serta mendukung dampak positif proyek terhadap ekonomi dan masyarakat.",
+  openGraph: {
+    title: "Perizinan - Legalitas Proyek Properti dan Konstruksi",
+    description:
+      "Kami membantu klien menangani legalitas perizinan proyek properti perumahan, apartemen, komersial, dan industri, serta mendukung dampak positif proyek terhadap ekonomi dan masyarakat.",
+    url: "https://www.legasilaw.com/service/perizinan",
+    type: "website",
+    images: [
+      {
+        url: "/images/bg-services.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Legalitas Perizinan Proyek Properti",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Perizinan - Legalitas Proyek Properti dan Konstruksi",
+    description:
+      "Kami membantu klien menangani legalitas perizinan proyek properti perumahan, apartemen, komersial, dan industri, serta mendukung dampak positif proyek terhadap ekonomi dan masyarakat.",
+    images: ["/images/bg-services.jpg"],
+  },
+};
+
+
 const PerizinanIcon = () => {
   return (
     <svg
