@@ -68,10 +68,10 @@ const CheckListIcon = () => {
 const PerizinanPage = () => {
   return (
     <section
-      className="h-full bg-cover bg-center bg-no-repeat relative"
+      className="h-full bg-cover bg-center relative"
       style={{
         backgroundImage: "url('/images/bg-services.jpg')",
-        height: "calc(100vh - 68px)",
+        minHeight: "calc(100vh - 68px)",
       }}
       id="perizinan"
     >

@@ -71,7 +71,7 @@ const PerizinanPage = () => {
       className="h-full bg-cover bg-center bg-no-repeat relative"
       style={{
         backgroundImage: "url('/images/bg-services.jpg')",
-        height: "calc(100vh - 68px)",
+        minHeight: "calc(100vh - 68px)",
       }}
       id="advokasi"
     >
