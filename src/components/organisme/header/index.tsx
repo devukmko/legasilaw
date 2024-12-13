@@ -6,13 +6,16 @@ import Logo from "@/components/core/logo";
 import { MenuButton, Menu, MenuItems, MenuItem } from "@headlessui/react";
 import Link from "next/link";
 import { Fragment } from 'react';
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   const [activeHash, setActiveHash] = useState<string>("");
-  const [isAtTop, setIsAtTop] = useState<boolean>(true);
-
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isAtTop, setIsAtTop] = useState<boolean>(pathname === "/");
+  
   const handleSmoothScroll = (hash: string) => {
-    const element = hash ? document.querySelector(hash) : document.documentElement;
+    const element = hash ? document?.querySelector(hash) : document.documentElement;
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -22,16 +25,23 @@ const Header = () => {
     setActiveHash(window.location.hash);
 
     const handleScroll = () => {
-      setIsAtTop(window.scrollY === 0);
+      setIsAtTop(window.scrollY === 0 && pathname === "/");
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [pathname]);
+
+  useEffect(() => { 
+    console.log(pathname)
+    if (pathname !== "/") {
+      setIsAtTop(false);
+    }
+  }, [pathname]);
 
   return (
     <div
-      className={`navbar bg-base-100 fixed top-0 z-20 transition-transform ${
+      className={`navbar bg-base-100 ${pathname === '/' ? 'fixed' : 'sticky'} top-0 z-20 transition-transform ${
         isAtTop ? "-translate-y-full" : "translate-y-0 shadow-md"
       }`}
     >
@@ -40,6 +50,7 @@ const Header = () => {
           <a
             href="#"
             onClick={(e) => {
+              router.push("/#");
               e.preventDefault();
               handleSmoothScroll("");
               setActiveHash("");
@@ -81,9 +92,10 @@ const Header = () => {
                 <MenuItem key={item.href}>
                   {({ focus }) => (
                     <Link
-                      href={item.href}
+                      href={`/${item.href}`}
                       onClick={(e) => {
                         e.preventDefault();
+                        router.push(`/${item.href}`);
                         handleSmoothScroll(item.href);
                         setActiveHash(item.href);
                       }}
@@ -111,10 +123,11 @@ const Header = () => {
               { href: "#contact", label: "Contact" },
             ].map((item) => (
               <li key={item.href}>
-                <a
-                  href={item.href}
+                <Link
+                  href={`/${item.href}`}
                   onClick={(e) => {
                     e.preventDefault();
+                    router.push(`/${item.href}`);
                     handleSmoothScroll(item.href);
                     setActiveHash(item.href);
                   }}
@@ -125,7 +138,7 @@ const Header = () => {
                   }`}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

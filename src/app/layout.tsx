@@ -31,9 +31,11 @@ export default function RootLayout({
         <body
         className={`${bellefair.className} ${gabarito.className} antialiased`}
       >
-        <Header />
-        <Toaster />
-        {children}
+        <div className="min-h-screen">
+          <Header />
+          <Toaster />
+          {children}
+        </div>
       </body>
     </html>
   );

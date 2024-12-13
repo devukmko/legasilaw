@@ -1,12 +1,13 @@
 import Container from "@/components/core/container";
 import { Image } from "@/components/core/image";
 import Typography from "@/components/core/typography";
+import Link from "next/link";
 import React from "react";
 
-const ServiceCard: React.FC<{ title: string; image: string }> = ({ title, image }) => {
+const ServiceCard: React.FC<{ title: string; image: string; href: string }> = ({ title, image, href }) => {
   return (
     // Ensure the hover class applies to the correct element
-    <div className="shadow-md rounded-lg overflow-hidden group transition-shadow duration-300 hover:shadow-2xl cursor-pointer">
+    <Link href={href} className="shadow-md rounded-lg overflow-hidden group transition-shadow duration-300 hover:shadow-2xl cursor-pointer">
       <Image src={image} alt="Services 1" fill className="aspect-square" style={{ aspectRatio: '64/53' }} />
       <div className="text-left p-4 bg-secondary flex-row flex">
         <Typography variant="h2" className="text-white flex-1">
@@ -30,7 +31,7 @@ const ServiceCard: React.FC<{ title: string; image: string }> = ({ title, image 
           </svg>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -50,9 +51,9 @@ const Services = () => {
             </Typography>
           </div>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
-            <ServiceCard title="Perizinan" image="/images/image1.png" />
-            <ServiceCard title="Advokasi" image="/images/image2.png" />
-            <ServiceCard title="Pengelola Kawasan" image="/images/image3.png" />
+            <ServiceCard title="Perizinan" image="/images/image1.png" href="/service/perizinan" />
+            <ServiceCard title="Advokasi" image="/images/image2.png" href="/service/advokasi" />
+            <ServiceCard title="Pengelola Kawasan" image="/images/image3.png" href="/service/pengelolaan-kawasan"/>
           </div>
         </div>
       </Container>

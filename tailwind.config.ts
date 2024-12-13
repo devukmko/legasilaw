@@ -10,6 +10,12 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/images/bg-hero.jpg')",
+      },
+      height: {
+        '128': '32rem',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

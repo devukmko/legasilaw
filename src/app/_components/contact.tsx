@@ -166,9 +166,9 @@ const Contact = () => {
           phoneNumber: data.phone,
         }),
         {
-          success: "Successfully inserted feedback!",
-          error: "Error! :(",
-          loading: "Processing...",
+          success: "Pesan berhasil dikirim",
+          error: "Terjadi kesalahan :(",
+          loading: "Loading...",
         },
         {
           success: {
@@ -191,7 +191,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="pb-10" id="contact">
+    <section className="pb-10 bg-neutral" id="contact">
       <Container gutter>
         <Typography
           variant="h1"

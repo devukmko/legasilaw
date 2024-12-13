@@ -6,8 +6,9 @@ import WhatsappButton from "./whatsapp-button";
 
 const Hero = () => {
   return (
-    <div className="hero text-neutral-content bg-neutral xl:bg-inherit relative">
-      <div className="absolute h-128 w-full clip-path-custom bg-neutral z-0"></div>
+    <div className="hero text-neutral-content bg-neutral xl:bg-inherit relative ">
+      <div className="absolute h-full lg:h-[704px] w-full clip-path-custom bg-neutral z-0 top-0 bg-hero-pattern bg-cover hidden xl:block"></div>
+      <div className="absolute h-full lg:h-[704px] w-full clip-path-custom inset-0 bg-black bg-opacity-70 z-1  hidden xl:block"></div>
       <Container gutter>
         <div className="align-middle items-center justify-center flex xl:hidden"  style={{ maxWidth: 159, margin: '0 auto' }}>
           <Image width={159} height={74} layout="responsive"  src="/images/logo.png" alt="logo" className="relative xl:absolute left-0 top-0" />
@@ -22,9 +23,7 @@ const Hero = () => {
                 Tenang dan nyaman, properti Anda terlindungi.
               </Typography>
               <p className="py-6 text-lg text-center md:text-left">
-                Kami berkomitmen membantu Anda melindungi properti Anda. Mulai dari
-                perizinan hingga sengketa, Kami akan menemani Anda. Konsultasikan
-                dengan Kami.
+                Kami adalah firma hukum yang menyediakan layanan berkualitas tinggi di bidang real estate. Dengan keahlian khusus di bidang properti kami berkomitmen membantu klien memperoleh tujuannya.
               </p>
               <div className="flex justify-center md:justify-start">
                 <WhatsappButton />
