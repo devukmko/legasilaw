@@ -1,18 +1,47 @@
+"use client";
+
 import Button from "@/components/core/button";
+import { whatsappClickCounter } from "@/libs/counter";
 import { clickWhatsappLink } from "@/libs/whatsapp";
 import Link from "next/link";
 
 const link = clickWhatsappLink()
 
 const WhatsappButton = () => {
+  const canCountClick = () => {
+    const lastClickTime = localStorage.getItem("whatsapp_click_token");
+    if (lastClickTime) {
+      const currentTime = Date.now();
+      const savedTime = parseInt(lastClickTime, 10);
+      // Check if 3 minutes (180000 ms) have passed
+      if (currentTime - savedTime < 180000) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  const handleClick = async () => {
+    if (!canCountClick()) {
+      return;
+    }
+
+    try {
+      const currentTime = Date.now();
+      localStorage.setItem("whatsapp_click_token", currentTime.toString());
+      await whatsappClickCounter(); 
+    } catch (error) {
+      console.error("Error handling WhatsApp click:", error);
+    } finally {
+    }
+  };
+
   return (
     <Button
       // href="https://wa.me/your-number"
       // target="_blank"
       // rel="noopener noreferrer"
-      // onClick={() => {
-      //   console.log('ss')
-      // }}
+      onClick={handleClick}
       variant="contained"
       size="large"
       className="w-full md:w-auto h-16 md:h-12"

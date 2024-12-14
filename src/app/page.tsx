@@ -3,6 +3,8 @@
 import Hero from "./_components/hero";
 import Services from "./_components/services";
 import AboutContact from './_components/about-contact';
+import Counter from "./_components/counter-visitor"; 
+
 
 export const metadata = {
   title: "Legasi Law Firm",
@@ -10,11 +12,11 @@ export const metadata = {
   openGraph: {
     title: "Legasi Law Firm",
     description: "Tenang dan nyaman, properti Anda terlindungi.",
-    url: "/images/logo.png", // Replace with your actual URL
+    url: "/images/logo.png", 
     type: "website",
     images: [
       {
-        url: "/images/logo.png", // Replace with the image URL
+        url: "/images/logo.png",
         width: 1200,
         height: 630,
         alt: "Lawfirm properti terlindungi",
@@ -29,16 +31,16 @@ export const metadata = {
   },
 };
 
-export default function Home() {
+
+
+
+export default async function Home() {
   return (
     <main>
-      {/* <Button variant="contained" color="primary" size="medium">
-        Hello World
-      </Button> */}
       <Hero />
       <Services />
-      {/* <AboutUs /> */}
       <AboutContact />
+      <Counter />
     </main>
   );
 }
