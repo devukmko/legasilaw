@@ -43,12 +43,11 @@ const WhatsappButton = () => {
       // rel="noopener noreferrer"
       onClick={handleClick}
       variant="contained"
+      className="w-full xl:w-auto"
       size="large"
-      className="w-full xl:w-auto h-16 md:h-12"
-      
       // className="btn btn-success text-white flex items-center"
     >
-      <Link href={link} target="_blank" style={{display: 'flex', alignItems: 'center', gap: '1.15rem'  }} >
+      <Link href={link} target="_blank" className="flex items-centerc text-lg" style={{ gap: '1.15rem', fontWeight: '600'  }} >
         <svg
           width="32"
           height="32"

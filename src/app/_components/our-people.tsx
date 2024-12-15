@@ -39,7 +39,7 @@ const PartnerCard = ({
 const OurPeople = () => {
   return (
     <section
-      className=" bg-people-pattern bg-cover overflow-hidden z-20 h-[577px] flex items-center justify-center"
+      className=" bg-people-pattern bg-cover overflow-hidden z-20 h-full lg:h-[577px] flex items-center justify-center"
       id="our-people"
     >
       {/* <div className="absolute inset-0 bg-black bg-opacity-50 h-full" ></div> */}
