@@ -12,6 +12,7 @@ export default {
     extend: {
       backgroundImage: {
         'hero-pattern': "url('/images/bg-hero.jpg')",
+        'people-pattern': "url('/images/bg-people.png')",
       },
       height: {
         '128': '32rem',

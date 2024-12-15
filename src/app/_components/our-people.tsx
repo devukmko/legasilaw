@@ -39,12 +39,12 @@ const PartnerCard = ({
 const OurPeople = () => {
   return (
     <section
-      className="pb-10  bg-hero-pattern bg-cover overflow-hidden z-20"
+      className=" bg-people-pattern bg-cover overflow-hidden z-20 h-[577px] flex items-center justify-center"
       id="our-people"
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50 h-full" ></div>
+      {/* <div className="absolute inset-0 bg-black bg-opacity-50 h-full" ></div> */}
       <Container gutter style={{ zIndex: 10 }}>
-        <div className="flex flex-col md:flex-row items-center py-10 p-4 gap-4" style={{ zIndex: '2' }}>
+        <div className="flex flex-col md:flex-row items-center py-10 p-4 gap-4" style={{ zIndex: '2', height: 'inherit' }}>
           <div className="flex flex-col gap-5 flex-1">
             <Typography
               variant="subtitle"
