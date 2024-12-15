@@ -44,7 +44,7 @@ const WhatsappButton = () => {
       onClick={handleClick}
       variant="contained"
       size="large"
-      className="w-full md:w-auto h-16 md:h-12"
+      className="w-full xl:w-auto h-16 md:h-12"
       
       // className="btn btn-success text-white flex items-center"
     >
