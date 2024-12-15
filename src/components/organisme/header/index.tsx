@@ -84,7 +84,7 @@ const Header = () => {
               className="origin-top w-40 transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 z-50 bg-white shadow-lg"
             >
               {[
-                { href: "#about-us", label: "About Us" },
+                { href: "about-us", label: "About Us" },
                 { href: "#services", label: "Services" },
                 { href: "#our-people", label: "Our People" },
                 { href: "#contact", label: "Contact" },
