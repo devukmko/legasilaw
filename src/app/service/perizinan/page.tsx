@@ -99,7 +99,7 @@ const PerizinanPage = () => {
           </Typography>
         </div>
 
-        <div className="relative z-10 flex flex-col py-10 p-4 gap-8 max-w-[795px] m-auto border-dashed border-2 border-secondary rounded-lg">
+        <div className="relative z-10 flex flex-col p-6 gap-2 max-w-[795px] m-auto border-dashed border-2 border-secondary rounded-lg">
           <Typography variant="body1" className="text-white text-left text-xl">
             Layanan Kami meliputi:
           </Typography>

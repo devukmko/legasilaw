@@ -13,7 +13,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/bg-services.jpg",
+        url: "/images/bg-kawasan.jpg",
         width: 1200,
         height: 630,
         alt: "Pengelolaan Kawasan Properti",
@@ -25,7 +25,7 @@ export const metadata = {
     title: "Pengelolaan Kawasan - Konsultasi dan Layanan Properti",
     description:
       "Kami memberikan layanan komprehensif dari perencanaan hingga pengelolaan proyek properti operasional, membantu pengembang properti pemula dengan arahan dan koneksi layanan pendukung.",
-    images: ["/images/bg-services.jpg"],
+    images: ["/images/bg-kawasan.jpg"],
   },
 };
 
@@ -115,7 +115,7 @@ const PerizinanPage = () => {
           </Typography>
         </div>
 
-        <div className="relative z-10 flex flex-col py-10 p-4 gap-8 max-w-[795px] m-auto border-dashed border-2 border-secondary rounded-lg">
+        <div className="relative z-10 flex flex-col p-6 gap-2 max-w-[795px] m-auto border-dashed border-2 border-secondary rounded-lg">
           <Typography variant="body1" className="text-white text-left text-xl">
             Layanan Kami meliputi:
           </Typography>

@@ -117,7 +117,7 @@ const Header = () => {
         <div className="flex-none hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {[
-              { href: "#about-us", label: "About Us" },
+              { href: "about-us", label: "About Us" },
               { href: "#services", label: "Services" },
               { href: "#our-people", label: "Our People" },
               { href: "#contact", label: "Contact" },
