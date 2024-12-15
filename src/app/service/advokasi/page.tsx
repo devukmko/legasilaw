@@ -70,7 +70,7 @@ const PerizinanPage = () => {
     <section
       className="h-full bg-cover bg-center bg-no-repeat relative"
       style={{
-        backgroundImage: "url('/images/bg-services.jpg')",
+        backgroundImage: "url('/images/bg-advokasi.jpg')",
         minHeight: "calc(100vh - 68px)",
       }}
       id="advokasi"

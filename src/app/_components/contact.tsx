@@ -18,8 +18,8 @@ const contactSchema = z.object({
     .regex(/^[0-9+-]+$/, "Nomor handphone tidak valid"),
   email: z
     .string()
-    .min(1, "Email is required")
-    .email("Format email tidak tepat"),
+    .email("Format email tidak tepat")
+    .optional(),
   message: z
     .string()
     .min(1, "Pesan harus diisi")
@@ -61,10 +61,10 @@ const SocialGroup = () => {
           </defs>
         </svg>
         <Typography variant="body2" className="text-white text-sm">
-          Facebook
+          Legasi Law Firm
         </Typography>
       </div>
-      <div className="flex flex-row gap-2">
+      {/* <div className="flex flex-row gap-2">
         <svg
           width="24"
           height="25"
@@ -100,7 +100,7 @@ const SocialGroup = () => {
         <Typography variant="body2" className="text-white  text-sm">
           Instagram
         </Typography>
-      </div>
+      </div> */}
       <div className="flex flex-row gap-2">
         <svg
           width="20"
@@ -216,13 +216,13 @@ const Contact = () => {
                     <input
                       {...field}
                       type="text"
-                      className="w-full px-4 py-2 border rounded-md outline outline-1"
+                      className="w-full px-4 py-2 border rounded-md outline outline-1 placeholder-gray-300"
                       placeholder="Cth. Samantha"
                     />
                   )}
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm">{errors.name.message}</p>
+                  <p className="text-red-500 text-sm p-1">{errors.name.message}</p>
                 )}
               </div>
 
@@ -237,18 +237,18 @@ const Contact = () => {
                     <input
                       {...field}
                       type="text"
-                      className="w-full px-4 py-2 border rounded-md outline outline-1"
+                      className="w-full px-4 py-2 border rounded-md outline outline-1 placeholder-gray-300"
                       placeholder="Cth. 0812-3456-7890"
                     />
                   )}
                 />
                 {errors.phone && (
-                  <p className="text-red-500 text-sm">{errors.phone.message}</p>
+                  <p className="text-red-500 text-sm p-1">{errors.phone.message}</p>
                 )}
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-bold mb-2">Email</label>
+                <label className="block text-sm font-bold mb-2">Email (Opsional)</label>
                 <Controller
                   name="email"
                   control={control}
@@ -256,13 +256,13 @@ const Contact = () => {
                     <input
                       {...field}
                       type="email"
-                      className="w-full px-4 py-2 border rounded-md outline outline-1"
+                      className="w-full px-4 py-2 border rounded-md outline outline-1 placeholder-gray-300"
                       placeholder="Cth. samantha@email.com"
                     />
                   )}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm">{errors.email.message}</p>
+                  <p className="text-red-500 text-sm p-1">{errors.email.message}</p>
                 )}
               </div>
 
@@ -274,7 +274,8 @@ const Contact = () => {
                   render={({ field }) => (
                     <textarea
                       {...field}
-                      className="w-full px-4 py-2 border rounded-md outline-1 outline"
+                      className="w-full px-4 py-2 border rounded-md outline-1 outline placeholder-gray-300"
+                      rows={3}
                       placeholder="Tulis pesan di sini..."
                     ></textarea>
                   )}
