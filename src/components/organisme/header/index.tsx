@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Container from "@/components/core/container";
 import Logo from "@/components/core/logo";
 import { MenuButton, Menu, MenuItems, MenuItem } from "@headlessui/react";
@@ -13,7 +13,8 @@ const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
   const [isAtTop, setIsAtTop] = useState<boolean>(pathname === "/");
-  
+  const buttonARef = useRef<HTMLButtonElement | null>(null)
+
   const handleSmoothScroll = (hash: string) => {
     const element = hash ? document?.querySelector(hash) : document.documentElement;
     if (element) {
@@ -62,7 +63,7 @@ const Header = () => {
 
         <div className="flex-none md:hidden">
           <Menu>
-            <MenuButton as={Fragment}>
+            <MenuButton as={Fragment} ref={buttonARef}>
               <div className="cursor-pointer btn btn-ghost btn-circle">
                 <svg
                   width="24"
@@ -98,6 +99,9 @@ const Header = () => {
                         router.push(`/${item.href}`);
                         handleSmoothScroll(item.href);
                         setActiveHash(item.href);
+                        if (buttonARef.current) {
+                          buttonARef.current.click(); 
+                        }
                       }}
                       className={`block px-4 py-2 text-sm ${
                         activeHash === item.href || focus
