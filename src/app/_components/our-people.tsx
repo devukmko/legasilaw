@@ -53,7 +53,7 @@ const OurPeople = () => {
               Apapun masalah properti Anda Konsultasikan dengan Kami
             </Typography>
             <div className="flex justify-center md:justify-start">
-              <WhatsappButton />
+              <WhatsappButton text="Mulai Konsultasi"/>
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-end justify-end gap-4 w-full" style={{ flex: 1.3 }}>

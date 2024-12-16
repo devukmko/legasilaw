@@ -61,7 +61,7 @@ const AboutUsPage = () => {
             efisiensi dalam setiap tahap pengelolaan.
           </Typography>
 
-          <Typography variant="h2" className="text-secondary text-left mt-14">
+          <Typography variant="h1" className="text-secondary text-left mt-14">
             Mitra dalam Penyelesaian Sengketa Properti
           </Typography>
           <Typography variant="body1" className="text-white text-lg">

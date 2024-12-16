@@ -53,7 +53,7 @@ const Services = () => {
           <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
             <ServiceCard title="Perizinan" image="/images/image1.png" href="/service/perizinan" />
             <ServiceCard title="Advokasi" image="/images/image2.png" href="/service/advokasi" />
-            <ServiceCard title="Pengelola Kawasan" image="/images/image3.png" href="/service/pengelolaan-kawasan"/>
+            <ServiceCard title="Pengelolaan Kawasan" image="/images/image3.png" href="/service/pengelolaan-kawasan"/>
           </div>
         </div>
       </Container>

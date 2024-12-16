@@ -91,7 +91,7 @@ const PerizinanPage = () => {
 
       <Container>
         <div className="relative z-10 flex flex-col items-center py-10  gap-8 max-w-[795px] m-auto">
-          <div className="flex flex-row gap-4">
+          <div className="flex flex-col lg:flex-row gap-4 items-center justify-center">
             <PengelolaanKawasanIcon />
             <Typography
               variant="h1"

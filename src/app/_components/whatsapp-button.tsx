@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const link = clickWhatsappLink()
 
-const WhatsappButton = () => {
+const WhatsappButton = ({ text = 'Konsultasi Sekarang' }) => {
   const canCountClick = () => {
     const lastClickTime = localStorage.getItem("whatsapp_click_token");
     if (lastClickTime) {
@@ -60,7 +60,7 @@ const WhatsappButton = () => {
             fill="#25D366"
           />
         </svg>
-        Konsultasi Sekarang
+        {text}
       </Link>
     </Button>
   );
