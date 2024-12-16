@@ -240,15 +240,21 @@ const Contact = () => {
               </div>
 
               <div className="mb-6">
-                <label className="block text-sm font-bold mb-2">
-                  Email (Opsional)
-                </label>
+                <div className="flex flex-row gap-2">
+                  <label className="block text-sm font-bold mb-2">Email</label>
+                  <label className="block text-sm font-bold mb-2 text-gray-300">
+                    (Optional)
+                  </label>
+                </div>
                 <Controller
                   name="email"
                   control={control}
-                  render={({ field }) => (
+                  render={({ field: { onChange, ...rest } }) => (
                     <input
-                      {...field}
+                      onChange={(e) => {
+                        onChange(e.target.value === "" ? undefined : e.target.value);
+                      }}
+                      {...rest}
                       type="email"
                       className="w-full px-4 py-2 border rounded-md outline outline-1 placeholder-gray-300"
                       placeholder="Cth. samantha@email.com"
