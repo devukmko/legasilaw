@@ -47,9 +47,5 @@ export default function Counter() {
     handleVisitorCounter();
   }, []); // Empty dependency array ensures it runs only on mount
 
-  return (
-    <div>
-      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
-    </div>
-  );
+  return null
 }
