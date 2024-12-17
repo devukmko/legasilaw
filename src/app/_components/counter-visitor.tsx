@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { visitorCounter } from "@/libs/counter";
 
 export default function Counter() {
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const canCountVisitor = () => {
     const lastVisitTime = localStorage.getItem("visitor_token");
@@ -25,8 +24,6 @@ export default function Counter() {
   };
 
   const handleVisitorCounter = async () => {
-    setErrorMessage(null);
-
     if (!canCountVisitor()) {
       return;
     }
@@ -37,7 +34,6 @@ export default function Counter() {
       setVisitorToken();
     } catch (error) {
       console.error(error);
-      setErrorMessage("Something went wrong while counting the visitor.");
     } finally {
     }
   };
