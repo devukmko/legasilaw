@@ -16,7 +16,7 @@ const contactSchema = z.object({
     .string()
     .min(1, "Nomor handphone harus diisi")
     .regex(/^[0-9+-]+$/, "Nomor handphone tidak valid"),
-  email: z.string().email("Format email tidak tepat").optional(),
+  email: z.string().email("Format email tidak tepat").or(z.literal("")).optional().nullable(),
   message: z
     .string()
     .min(1, "Pesan harus diisi")
@@ -141,6 +141,7 @@ const Contact = () => {
       name: "",
       phone: "",
       message: "",
+      email: "",
     },
   });
 
@@ -148,7 +149,7 @@ const Contact = () => {
     return toast
       .promise(
         createFeedback({
-          email: data.email,
+          email: data.email || '',
           fullname: data.name,
           message: data.message,
           phoneNumber: data.phone,
@@ -249,13 +250,17 @@ const Contact = () => {
                 <Controller
                   name="email"
                   control={control}
-                  render={({ field: { onChange, ...rest } }) => (
+                  render={({ field: { onChange, value, ...rest } }) => (
                     <input
+                      // onChange={(e) => {
+                      //   onChange(e.target.value);
+                      // }}
+                      type="email"
                       onChange={(e) => {
-                        onChange(e.target.value === "" ? undefined : e.target.value);
+                        onChange( e.target.value)
                       }}
                       {...rest}
-                      type="email"
+                      value={value || ''}
                       className="w-full px-4 py-2 border rounded-md outline outline-1 placeholder-gray-300"
                       placeholder="Cth. samantha@email.com"
                     />
