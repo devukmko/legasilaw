@@ -48,7 +48,7 @@ const OurPeople = () => {
           <div className="flex flex-col gap-5 flex-1">
             <Typography
               variant="subtitle"
-              className="font-bold text-white text-4xl"
+              className="font-bold text-white text-4xl text-center lg:text-left"
             >
               Apapun masalah properti Anda Konsultasikan dengan Kami
             </Typography>

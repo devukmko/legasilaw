@@ -3,9 +3,7 @@ const createWhatsAppLink = (
     recipientNumber: string
   ): string => {
     const message = `
-Halo Tim Legasi Law Firm,
-Saya tertarik untuk berkonsultasi terkait perlindungan properti saya. Mohon informasi lebih lanjut mengenai layanan yang tersedia, seperti perizinan dan penyelesaian sengketa.
-Terima kasih, saya menantikan tanggapan dari Anda.
+Halo Tim Legasi! Saya ingin berkonsultasi terkait legalitas dan perlindungan properti saya. Mohon informasi lebih lanjut. Terimakasih.
     `;
   
     const encodedMessage = encodeURIComponent(message);

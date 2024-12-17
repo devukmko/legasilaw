@@ -62,7 +62,7 @@ const AboutUs = () => {
       {/* Contact Info */}
       <div>
         <h3 className="text-2xl font-bold mb-4">Hubungi Kami</h3>
-        <p className="mb-2">📧 info@legasilawfirm.com</p>
+        <p className="mb-2">📧 info@legasilaw.com</p>
         <p className="mb-2">📞 +62 812-3456-7890</p>
         <p>🏢 Tower Avilium Lt. 09, Jakarta, Indonesia</p>
       </div>

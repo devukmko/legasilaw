@@ -91,7 +91,7 @@ const SocialGroup = () => {
         </svg>
 
         <Typography variant="body2" className="text-white text-sm">
-          info@legasilawfirm.com
+          info@legasilaw.com
         </Typography>
       </div>
       <div className="flex flex-row gap-2  items-center">

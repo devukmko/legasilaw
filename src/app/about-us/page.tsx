@@ -50,25 +50,34 @@ const AboutUsPage = () => {
             Kami memahami bahwa industri properti terus berkembang, dan kami
             selalu mengikuti perkembangan terkini terkait industri ini. Tim kami
             berkomitmen untuk menyediakan layanan hukum terbaik bagi klien dan
-            memastikan bahwa proyek properti berjalan lancar. Dengan sumber daya
-            dan pengalaman yang kami miliki, kami membantu pengembang pemula dan
-            berpengalaman dalam memberikan hasil terbaik.
+            memastikan bahwa proyek properti yang dijalankan berhasil. Selain
+            itu, kami senantiasa mengoptimalkan sumber daya yang kami miliki
+            agar dapat menyediakan layanan terbaik dengan biaya rendah, terutama
+            yang berkaitan dengan perizinan dan sertifikasi proyek properti.
+            Kami memiliki misi untuk menjadi mitra kepercayaan bagi semua
+            kalangan pengembang properti, baik yang telah lanjut maupun
+            pengembang pemula yang turut berkontribusi bagi kemajuan ekonomi dan
+            masyarakat.
           </Typography>
 
           <Typography variant="body1" className="text-white text-lg">
-            Kami menyediakan layanan dari perencanaan hingga pengelolaan proyek
-            properti, membantu klien mencapai tujuan mereka dan memastikan
-            efisiensi dalam setiap tahap pengelolaan.
+            Kami berkomitmen menyediakan layanan yang dibutuhkan klien sejak
+            masa prencanaan hingga pengelolaan proyek properti yang telah
+            beroperasi. Dengan pengalaman yang kami miliki, kami akan membantu
+            klien mencapai tujuan mereka dan memastikan pengelolaan properti
+            dilakukan secara tepat dan efisien.
           </Typography>
 
           <Typography variant="h1" className="text-secondary text-left mt-14">
             Mitra dalam Penyelesaian Sengketa Properti
           </Typography>
           <Typography variant="body1" className="text-white text-lg">
-            Dinamika dalam transaksi properti dapat menimbulkan permasalahan
-            yang merugikan salah satu pihak. Kami berkomitmen membantu
-            menyelesaikan sengketa properti Anda dengan pendekatan yang
-            profesional dan komprehensif, memastikan hak-hak Anda terlindungi.
+            Dinamika dalam transaksi properti terkadang menimbulkan permasalahan
+            yang dapat merugikan salah satu pihak. Kami menyadari banyak pihak
+            yang tidak mengerti bagaimana mempertahankan haknya. Tim kami
+            berkomitmen membantu menyelesaikan sengketa properti Anda dan
+            memberikan pemahaman yang komprehensif terkait permasalahan
+            transaksi properti yang dihadapi.
           </Typography>
         </div>
       </Container>
