@@ -21,7 +21,7 @@ const PartnerCard = ({
         ratio="212/264"
         style={{ aspectRatio: "212/264" }}
       />
-      <div className="p-4 bg-secondary flex flex-col gap-0 items-center justify-center">
+      <div className="p-4 bg-primary flex flex-col gap-0 items-center justify-center">
         <Typography
           variant="body1"
           className="font-bold text-white text-sm mb-1"
@@ -48,7 +48,7 @@ const OurPeople = () => {
           <div className="flex flex-col gap-5 flex-1">
             <Typography
               variant="subtitle"
-              className="font-bold text-white text-2xl lg:text-4xl text-center lg:text-left"
+              className="font-bold text-white text-xl md:text-4xl text-center lg:text-left"
             >
               Apapun masalah properti Anda Konsultasikan dengan Kami
             </Typography>

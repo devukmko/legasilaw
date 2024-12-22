@@ -8,6 +8,7 @@ import Image from "next/image";
 import Typography from "@/components/core/typography";
 import toast from "react-hot-toast";
 import { createFeedback } from "@/libs/feedback";
+import Link from "next/link";
 
 // Zod Schema for validation
 const contactSchema = z.object({
@@ -28,7 +29,7 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 const SocialGroup = () => {
   return (
     <div className="gap-2 flex-col flex">
-      <div className="flex flex-row gap-2  items-center">
+      <Link href="https://web.facebook.com/profile.php?id=615702074832630" target="_blank" className="flex flex-row gap-2  items-center">
         <div>
           <svg
             width="24"
@@ -62,7 +63,7 @@ const SocialGroup = () => {
         <Typography variant="body2" className="text-white text-sm flex-1">
           Legasi Law Firm
         </Typography>
-      </div>
+      </Link>
       <div className="flex flex-row gap-2 items-center">
         <svg
           width="24"
@@ -122,7 +123,7 @@ const SocialGroup = () => {
         </svg>
 
         <Typography variant="body2" className="text-white text-sm">
-          Tower Avilium Lt. 09, Jakarta, Indonesia
+          Tower Mahakam Lt. GF, Jababeka Cikarang, Bekasi.
         </Typography>
       </div>
     </div>
@@ -294,7 +295,7 @@ const Contact = () => {
                 )}
               </div>
 
-              <button type="submit" className="btn btn-primary w-full">
+              <button type="submit" className="btn btn-primary w-full text-white shadow-md">
                 Kirim Pesan
               </button>
             </form>

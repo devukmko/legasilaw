@@ -12,7 +12,7 @@ const Header = () => {
   const [activeHash, setActiveHash] = useState<string>("");
   const pathname = usePathname();
   const router = useRouter();
-  const [isAtTop, setIsAtTop] = useState<boolean>(pathname === "/");
+  const [isAtTop, setIsAtTop] = useState<boolean>(false);
   const buttonARef = useRef<HTMLButtonElement | null>(null)
 
   const handleSmoothScroll = (hash: string) => {
@@ -26,7 +26,7 @@ const Header = () => {
     setActiveHash(window.location.hash);
 
     const handleScroll = () => {
-      setIsAtTop(window.scrollY === 0 && pathname === "/");
+      // setIsAtTop(window.scrollY === 0 && pathname === "/");
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -42,6 +42,7 @@ const Header = () => {
 
   return (
     <div
+      // className={`navbar bg-base-100 ${pathname === '/' ? 'fixed' : 'sticky'} top-0 z-20 transition-transform ${
       className={`navbar bg-base-100 ${pathname === '/' ? 'fixed' : 'sticky'} top-0 z-20 transition-transform ${
         isAtTop ? "-translate-y-full" : "translate-y-0 shadow-md"
       }`}
@@ -85,10 +86,10 @@ const Header = () => {
               className="origin-top w-40 transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 z-50 bg-white shadow-lg"
             >
               {[
-                { href: "about-us", label: "About Us" },
-                { href: "#services", label: "Services" },
-                { href: "#our-people", label: "Our People" },
-                { href: "#contact", label: "Contact" },
+                { href: "about-us", label: "Tentang Kami" },
+                { href: "#services", label: "Layanan" },
+                { href: "#our-people", label: "Tim Kami" },
+                { href: "#contact", label: "Kontak" },
               ].map((item) => (
                 <MenuItem key={item.href}>
                   {({ focus }) => (
@@ -121,10 +122,10 @@ const Header = () => {
         <div className="flex-none hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {[
-              { href: "about-us", label: "About Us" },
-              { href: "#services", label: "Services" },
-              { href: "#our-people", label: "Our People" },
-              { href: "#contact", label: "Contact" },
+              { href: "about-us", label: "Tentang Kami" },
+              { href: "#services", label: "Layanan" },
+              { href: "#our-people", label: "Tim Kami" },
+              { href: "#contact", label: "Kontak" },
             ].map((item) => (
               <li key={item.href}>
                 <Link
