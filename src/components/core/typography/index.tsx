@@ -20,7 +20,7 @@ export const Typography = forwardRef<HTMLHeadingElement, Props>(
     switch (variant) {
       case 'h1':
         Element = 'h1'
-        style = `text-5xl ${bellefair.className}`
+        style = `text-4xl ${bellefair.className}`
         break
       case 'h2':
         Element = 'h2'

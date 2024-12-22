@@ -35,10 +35,10 @@ export default {
     themes: [
       {
         lawfirm: {
-          "primary": "#006A28",
-          "secondary": "#BF936A",
+          "primary": "#BF936A",
+          "secondary": "#163359",
           "accent": "#212121",
-          "neutral": "#212121",
+          "neutral": "#163359",
           "base-100": "#ffffff",
 
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes

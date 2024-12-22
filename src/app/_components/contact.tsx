@@ -122,7 +122,7 @@ const SocialGroup = () => {
         </svg>
 
         <Typography variant="body2" className="text-white text-sm">
-          Tower Avilium Lt. 09, Jakarta, Indonesia
+          Tower Mahakam Lt. GF, Jababeka Cikarang, Bekasi.
         </Typography>
       </div>
     </div>
@@ -294,7 +294,7 @@ const Contact = () => {
                 )}
               </div>
 
-              <button type="submit" className="btn btn-primary w-full">
+              <button type="submit" className="btn btn-primary w-full text-white shadow-md">
                 Kirim Pesan
               </button>
             </form>
