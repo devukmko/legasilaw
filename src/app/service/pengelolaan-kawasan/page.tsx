@@ -147,7 +147,7 @@ const KawasanPage = () => {
                   Layanan Kami meliputi:
                 </Typography>
                 {[
-                  "Memberikan pemahaman mengenai hal-hal yang dibutuhkan terkait pengelolaan kawasan hunian, gedung, dan komersil, serta standar pengelolaan properti yang baik, sehingga dapat memberikan kenyamanan bagi pemilik dan meningkatkan nilai properti.",
+                 "Memberikan pemahaman mengenai hal-hal yang dibutuhkan terkait pengelolaan kawasan hunian, gedung, dan komersil, serta standar pengelolaan properti yang baik, sehingga dapat memberikan kenyamanan bagi pemilik dan meningkatkan nilai properti.",
                   "Membantu klien dalam hal perencanaan dan pengadaan tenaga keamanan, tenaga kebersihan, tenaga teknisi dan maintenance lainnya, serta memberikan rekomendasi pihak pelaksana yang tepat.",
                   "Melakukan monitoring dan evaluasi terhadap kinerja pihak pelaksana agar tetap sesuai dengan kebutuhan prinsipal / klien.",
                   "Membantu klien menyiapkan dokumen-dokumen yang dibutuhkan terkait pengelolaan properti.",

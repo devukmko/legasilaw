@@ -41,7 +41,7 @@ const Hero = () => {
             <div className="max-w-3xl">
               <Typography
                 variant="h1"
-                className="text-white text-center lg:text-left text-2xl lg:text-5xl m-auto max-w-[250px] lg:max-w-full"
+                className="text-white text-center lg:text-left text-2xl lg:text-5xl max-w-[250px] lg:max-w-[534px]"
                 style={{
                   WebkitTextStroke: "1px #FFFFFF",
                   color: "#FFFFFF", // Adjust text color
@@ -49,7 +49,7 @@ const Hero = () => {
               >
                 Mitra hukum terpercaya untuk investasi properti Anda
               </Typography>
-              <p className="py-6 text-center lg:text-left text-sm lg:text-lg ">
+              <p className="py-6 text-center lg:text-left text-sm lg:text-lg  max-w-[250px] lg:max-w-[534px]">
                 Dengan keahlian khusus di bidang properti kami berkomitmen
                 membantu klien memperoleh tujuannya.
               </p>

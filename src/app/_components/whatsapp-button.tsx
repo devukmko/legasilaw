@@ -43,7 +43,7 @@ const WhatsappButton = ({ text = 'Konsultasi Sekarang' }) => {
       // rel="noopener noreferrer"
       onClick={handleClick}
       variant="contained"
-      className="w-full xl:w-auto btn-md md:btn-lg"
+      className="w-full xl:w-auto btn-md md:btn-lg shadow-sm"
       // className="btn btn-success text-white flex items-center"
     >
       <Link href={link} target="_blank" className="flex items-centerc text-lg" style={{ gap: '1.15rem', fontWeight: '600'  }} >
