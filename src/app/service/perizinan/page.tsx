@@ -131,13 +131,17 @@ const PerizinanPage = () => {
                 </Typography>
                 {[
                   "Sertifikasi lahan mulai dari tahap perencanaan, pengadaan, hingga pengelolaan sertifikat proyek properti diantaranya pendaftaran hak, pemisahan/pemecahan bidang, dan pengalihan hak.",
-                  "Pemenuhan persyaratan izin untuk melakukan konstruksi bangunan sesuai dengan peraturan perundang-undangan termasuk Izin Prinsip, Rekomendasi, dan Pengesahan Siteplan.",
+                  "Pemenuhan persyaratan izin untuk melakukan konstruksi bangunan sesuai dengan peraturan perundang-undangan dan peraturan daerah diantaranya Izin Prinsip, Rekomendasi, Kesesuaian Kegiatan Pemanfaatan Ruang (KKPR), Pengesahan Siteplan, Pertelaan, Persetujuan Bangunan Gedung atau IMB, Sertifikat Laik Fungsi, serta izin-izin pendukung lainnya.",
+                  "Pembaruan dan perpanjangan izin yang telah atau akan habis masa berlakunya.",
                 ].map((item, index) => (
                   <div key={index} className="flex flex-row gap-2">
                     <div>
                       <CheckListIcon />
                     </div>
-                    <Typography variant="body1" className="text-black text-base">
+                    <Typography
+                      variant="body1"
+                      className="text-black text-base"
+                    >
                       {item}
                     </Typography>
                   </div>

@@ -30,7 +30,7 @@ const PartnerCard = ({
           {name}
         </Typography>
         <div style={{ height: "1px", backgroundColor: "#67492D", width: "100%", maxWidth: "150px" }}></div>
-        <Typography variant="body1" className="text-gray-500 text-sm" style={{ color:"#67492D" }}>{title}</Typography>
+        <Typography variant="body1" className="text-white text-sm">{title}</Typography>
       </div>
     </div>
   );
