@@ -26,10 +26,23 @@ const Header = () => {
     setActiveHash(window.location.hash);
 
     const handleScroll = () => {
-      // setIsAtTop(window.scrollY === 0 && pathname === "/");
+      const sections = document.querySelectorAll("section[id]");
+      let foundActiveHash = "";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          foundActiveHash = `#${section.id}`;
+        }
+      });
+
+      if (foundActiveHash !== activeHash) {
+        setActiveHash(foundActiveHash);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
@@ -106,7 +119,7 @@ const Header = () => {
                       }}
                       className={`block px-4 py-2 text-sm ${
                         activeHash === item.href || focus
-                          ? "font-bold text-secondary"
+                          ? "font-bold text-primary"
                           : "text-black"
                       }`}
                     >
@@ -136,10 +149,10 @@ const Header = () => {
                     handleSmoothScroll(item.href);
                     setActiveHash(item.href);
                   }}
-                  className={`${
+                  className={`btn-primary ${
                     activeHash === item.href
-                      ? "font-bold text-secondary"
-                      : "font-bold text-black hover:text-secondary"
+                      ? "font-bold text-primary"
+                      : "font-bold text-black hover:text-primary focus:text-primary"
                   }`}
                 >
                   {item.label}

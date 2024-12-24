@@ -4,10 +4,11 @@ import Button from "@/components/core/button";
 import { whatsappClickCounter } from "@/libs/counter";
 import { clickWhatsappLink } from "@/libs/whatsapp";
 import Link from "next/link";
+import React from "react";
 
 const link = clickWhatsappLink()
 
-const WhatsappButton = ({ text = 'Konsultasi Sekarang' }) => {
+const WhatsappButton = ({ text = 'Konsultasi Sekarang', className = '' }: { text?: string; className?: React.ComponentProps<'button'>['className'] }) => {
   const canCountClick = () => {
     const lastClickTime = localStorage.getItem("whatsapp_click_token");
     if (lastClickTime) {
@@ -43,7 +44,7 @@ const WhatsappButton = ({ text = 'Konsultasi Sekarang' }) => {
       // rel="noopener noreferrer"
       onClick={handleClick}
       variant="contained"
-      className="w-full xl:w-auto btn-md md:btn-lg shadow-sm"
+      className={"w-full xl:w-auto btn-md md:btn-lg shadow-md " + className}
       // className="btn btn-success text-white flex items-center"
     >
       <Link href={link} target="_blank" className="flex items-centerc text-lg" style={{ gap: '1.15rem', fontWeight: '600'  }} >

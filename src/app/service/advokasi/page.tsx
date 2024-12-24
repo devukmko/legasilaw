@@ -1,3 +1,4 @@
+import WhatsappButton from "@/app/_components/whatsapp-button";
 import Container from "@/components/core/container";
 import Typography from "@/components/core/typography";
 import Image from "next/image";
@@ -92,7 +93,7 @@ const AdvokasiPage = () => {
               // fill
             />
           </div>
-          <div className="flex-[1.25]">
+          <div className="flex-[1.6] flex flex-col gap-4">
             <div className="flex flex-col gap-4">
               <div className="flex flex-row gap-4">
                 <AdvokasiIcon />
@@ -122,7 +123,7 @@ const AdvokasiPage = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="relative z-10 flex flex-col pt-6 gap-2 max-w-[795px] m-auto ">
+              <div className="relative z-10 flex flex-col gap-2 max-w-[795px] m-auto  border-dashed border-2 border-primary rounded-lg py-4 px-6 bor">
                 <Typography
                   variant="body1"
                   className="text-black text-left text-base font-bold"
@@ -147,6 +148,9 @@ const AdvokasiPage = () => {
                   </div>
                 ))}
               </div>
+            </div>
+            <div>
+              <WhatsappButton className="btn-sm" />
             </div>
           </div>
         </div>

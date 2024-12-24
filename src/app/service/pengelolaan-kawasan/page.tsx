@@ -1,3 +1,4 @@
+import WhatsappButton from "@/app/_components/whatsapp-button";
 import Container from "@/components/core/container";
 import Typography from "@/components/core/typography";
 import Image from "next/image";
@@ -100,12 +101,9 @@ const KawasanPage = () => {
               height={537}
               layout="responsive"
               objectFit="cover"
-              // ratio="525/537"
-
-              // fill
             />
           </div>
-          <div className="flex-[1.25]">
+          <div className="flex-[1.6] flex flex-col gap-4">
             <div className="flex flex-col gap-4">
               <div className="flex flex-row gap-4">
                 <PengelolaanKawasanIcon />
@@ -139,7 +137,7 @@ const KawasanPage = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="relative z-10 flex flex-col pt-6 gap-2 max-w-[795px] m-auto ">
+              <div className="relative z-10 flex flex-col gap-2 max-w-[795px] m-auto  border-dashed border-2 border-primary rounded-lg py-4 px-6 bor">
                 <Typography
                   variant="body1"
                   className="text-black text-left text-base font-bold"
@@ -147,7 +145,7 @@ const KawasanPage = () => {
                   Layanan Kami meliputi:
                 </Typography>
                 {[
-                 "Memberikan pemahaman mengenai hal-hal yang dibutuhkan terkait pengelolaan kawasan hunian, gedung, dan komersil, serta standar pengelolaan properti yang baik, sehingga dapat memberikan kenyamanan bagi pemilik dan meningkatkan nilai properti.",
+                  "Memberikan pemahaman mengenai hal-hal yang dibutuhkan terkait pengelolaan kawasan hunian, gedung, dan komersil, serta standar pengelolaan properti yang baik, sehingga dapat memberikan kenyamanan bagi pemilik dan meningkatkan nilai properti.",
                   "Membantu klien dalam hal perencanaan dan pengadaan tenaga keamanan, tenaga kebersihan, tenaga teknisi dan maintenance lainnya, serta memberikan rekomendasi pihak pelaksana yang tepat.",
                   "Melakukan monitoring dan evaluasi terhadap kinerja pihak pelaksana agar tetap sesuai dengan kebutuhan prinsipal / klien.",
                   "Membantu klien menyiapkan dokumen-dokumen yang dibutuhkan terkait pengelolaan properti.",
@@ -165,6 +163,9 @@ const KawasanPage = () => {
                   </div>
                 ))}
               </div>
+            </div>
+            <div>
+              <WhatsappButton className="btn-sm" />
             </div>
           </div>
         </div>

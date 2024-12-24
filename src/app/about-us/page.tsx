@@ -58,7 +58,7 @@ const AboutUsPage = () => {
               // fill
             />
           </div>
-          <div className="flex-[1.25]">
+          <div className="flex-[1.6]">
             <div className="flex flex-col gap-4">
               <Typography
                 variant="h1"
