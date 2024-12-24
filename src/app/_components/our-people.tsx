@@ -58,7 +58,7 @@ const OurPeople = () => {
           </div>
           <div className="flex flex-col md:flex-row items-end justify-end gap-4 w-full" style={{ flex: 1.3 }}>
             <PartnerCard
-              name="Puja Jannatunna’im, S.H."
+              name="Puja Jannatunna’im, SH"
               title="Managing Partner"
               image="/images/frame1.png"
             />

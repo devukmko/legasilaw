@@ -1,10 +1,4 @@
-// import Button from "@/components/core/button";
-// import Container from "@/components/core/container";
-import Hero from "./_components/hero";
-import Services from "./_components/services";
-import AboutContact from './_components/about-contact';
-import Counter from "./_components/counter-visitor"; 
-
+import Home from "./_components/home";
 
 export const metadata = {
   title: "Legasi Law Firm",
@@ -31,13 +25,12 @@ export const metadata = {
   },
 };
 
-export default async function Home() {
+export default function HomePage() {
+  
+
   return (
     <main>
-      <Hero />
-      <Services />
-      <AboutContact />
-      <Counter />
+      <Home />
     </main>
   );
 }
