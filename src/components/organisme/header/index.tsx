@@ -1,24 +1,34 @@
-'use client';
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import Container from "@/components/core/container";
 import Logo from "@/components/core/logo";
 import { MenuButton, Menu, MenuItems, MenuItem } from "@headlessui/react";
 import Link from "next/link";
-import { Fragment } from 'react';
+import { Fragment } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   const [activeHash, setActiveHash] = useState<string>("");
   const pathname = usePathname();
   const router = useRouter();
-  const [isAtTop, setIsAtTop] = useState<boolean>(pathname === "/");
-  const buttonARef = useRef<HTMLButtonElement | null>(null)
+  const [isAtTop, setIsAtTop] = useState<boolean>(false);
+  const buttonARef = useRef<HTMLButtonElement | null>(null);
 
   const handleSmoothScroll = (hash: string) => {
-    const element = hash ? document?.querySelector(hash) : document.documentElement;
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    const element = hash.startsWith("#")
+      ? document.querySelector(hash)
+      : document.documentElement;
+
+    if (!element) {
+      console.warn(`No element found for selector: ${hash}`);
+      return;
+    }
+
+    element.scrollIntoView({ behavior: "smooth" });
+    // Update URL without causing navigation
+    if (hash.startsWith("#")) {
+      window.history.replaceState(null, "", hash);
     }
   };
 
@@ -26,15 +36,31 @@ const Header = () => {
     setActiveHash(window.location.hash);
 
     const handleScroll = () => {
-      setIsAtTop(window.scrollY === 0 && pathname === "/");
+      const sections = document.querySelectorAll("section[id]");
+      let foundActiveHash = "";
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2
+        ) {
+          foundActiveHash = `#${section.id}`;
+        }
+      });
+
+      if (foundActiveHash !== activeHash) {
+        setActiveHash(foundActiveHash);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
-  useEffect(() => { 
-    console.log(pathname)
+  useEffect(() => {
+    console.log(pathname);
     if (pathname !== "/") {
       setIsAtTop(false);
     }
@@ -42,7 +68,10 @@ const Header = () => {
 
   return (
     <div
-      className={`navbar bg-base-100 ${pathname === '/' ? 'fixed' : 'sticky'} top-0 z-20 transition-transform ${
+      // className={`navbar bg-base-100 ${pathname === '/' ? 'fixed' : 'sticky'} top-0 z-20 transition-transform ${
+      className={`navbar bg-base-100 ${
+        pathname === "/" ? "fixed" : "sticky"
+      } top-0 z-20 transition-transform ${
         isAtTop ? "-translate-y-full" : "translate-y-0 shadow-md"
       }`}
     >
@@ -85,10 +114,10 @@ const Header = () => {
               className="origin-top w-40 transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0 z-50 bg-white shadow-lg"
             >
               {[
-                { href: "about-us", label: "About Us" },
-                { href: "#services", label: "Services" },
-                { href: "#our-people", label: "Our People" },
-                { href: "#contact", label: "Contact" },
+                { href: "about-us", label: "Tentang Kami" },
+                { href: "#services", label: "Layanan" },
+                { href: "#our-people", label: "Tim Kami" },
+                { href: "#contact", label: "Kontak" },
               ].map((item) => (
                 <MenuItem key={item.href}>
                   {({ focus }) => (
@@ -100,12 +129,12 @@ const Header = () => {
                         handleSmoothScroll(item.href);
                         setActiveHash(item.href);
                         if (buttonARef.current) {
-                          buttonARef.current.click(); 
+                          buttonARef.current.click();
                         }
                       }}
                       className={`block px-4 py-2 text-sm ${
                         activeHash === item.href || focus
-                          ? "font-bold text-secondary"
+                          ? "font-bold text-primary"
                           : "text-black"
                       }`}
                     >
@@ -121,10 +150,10 @@ const Header = () => {
         <div className="flex-none hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {[
-              { href: "about-us", label: "About Us" },
-              { href: "#services", label: "Services" },
-              { href: "#our-people", label: "Our People" },
-              { href: "#contact", label: "Contact" },
+              { href: "about-us", label: "Tentang Kami" },
+              { href: "#services", label: "Layanan" },
+              { href: "#our-people", label: "Tim Kami" },
+              { href: "#contact", label: "Kontak" },
             ].map((item) => (
               <li key={item.href}>
                 <Link
@@ -135,10 +164,10 @@ const Header = () => {
                     handleSmoothScroll(item.href);
                     setActiveHash(item.href);
                   }}
-                  className={`${
+                  className={`btn-primary ${
                     activeHash === item.href
-                      ? "font-bold text-secondary"
-                      : "font-bold text-black hover:text-secondary"
+                      ? "font-bold text-primary"
+                      : "font-bold text-black hover:text-primary focus:text-primary"
                   }`}
                 >
                   {item.label}

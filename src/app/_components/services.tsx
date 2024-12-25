@@ -9,7 +9,7 @@ const ServiceCard: React.FC<{ title: string; image: string; href: string }> = ({
     // Ensure the hover class applies to the correct element
     <Link href={href} className="shadow-md rounded-lg overflow-hidden group transition-shadow duration-300 hover:shadow-2xl cursor-pointer">
       <Image src={image} alt="Services 1" fill className="aspect-square" style={{ aspectRatio: '64/53' }} />
-      <div className="text-left p-4 bg-secondary flex-row flex">
+      <div className="text-left p-4 bg-primary flex-row flex">
         <Typography variant="h2" className="text-white flex-1">
           {title}
         </Typography>
@@ -43,17 +43,17 @@ const Services = () => {
       <Container gutter>
         <div className="gap-8 flex-col flex">
           <div className="max-w">
-            <Typography variant="h1" className="text-center md:text-left">
+            <Typography variant="h1" className="text-center md:text-left text-xl md:text-5xl">
               LEGASI LAW FIRM 
             </Typography>
-            <Typography variant="subtitle" className="text-secondary text-center md:text-left">
+            <Typography variant="subtitle" className="text-primary text-center md:text-left text-md md:text-2xl">
               Real Estate Specialist
             </Typography>
           </div>
           <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
             <ServiceCard title="Perizinan" image="/images/image1.png" href="/service/perizinan" />
             <ServiceCard title="Advokasi" image="/images/image2.png" href="/service/advokasi" />
-            <ServiceCard title="Pengelolaan Kawasan" image="/images/image3.png" href="/service/pengelolaan-kawasan"/>
+            <ServiceCard title="Pengelolaan Properti" image="/images/image3.png" href="/service/pengelolaan-kawasan"/>
           </div>
         </div>
       </Container>

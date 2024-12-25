@@ -21,7 +21,7 @@ const PartnerCard = ({
         ratio="212/264"
         style={{ aspectRatio: "212/264" }}
       />
-      <div className="p-4 bg-secondary flex flex-col gap-0 items-center justify-center">
+      <div className="p-4 bg-primary flex flex-col gap-0 items-center justify-center">
         <Typography
           variant="body1"
           className="font-bold text-white text-sm mb-1"
@@ -30,7 +30,7 @@ const PartnerCard = ({
           {name}
         </Typography>
         <div style={{ height: "1px", backgroundColor: "#67492D", width: "100%", maxWidth: "150px" }}></div>
-        <Typography variant="body1" className="text-gray-500 text-sm" style={{ color:"#67492D" }}>{title}</Typography>
+        <Typography variant="body1" className="text-white text-sm">{title}</Typography>
       </div>
     </div>
   );
@@ -48,7 +48,7 @@ const OurPeople = () => {
           <div className="flex flex-col gap-5 flex-1">
             <Typography
               variant="subtitle"
-              className="font-bold text-white text-2xl lg:text-4xl text-center lg:text-left"
+              className="font-bold text-white text-xl md:text-4xl text-center lg:text-left"
             >
               Apapun masalah properti Anda Konsultasikan dengan Kami
             </Typography>
@@ -58,7 +58,7 @@ const OurPeople = () => {
           </div>
           <div className="flex flex-col md:flex-row items-end justify-end gap-4 w-full" style={{ flex: 1.3 }}>
             <PartnerCard
-              name="Puja Jannatunna’im, S.H."
+              name="Puja Jannatunna’im, SH"
               title="Managing Partner"
               image="/images/frame1.png"
             />

@@ -1,5 +1,7 @@
+import WhatsappButton from "@/app/_components/whatsapp-button";
 import Container from "@/components/core/container";
 import Typography from "@/components/core/typography";
+import Image from "next/image";
 
 export const metadata = {
   title: "Advokasi Properti - Penyelesaian Sengketa dan Konsultasi",
@@ -28,7 +30,6 @@ export const metadata = {
     images: ["/images/bg-advokasi.jpg"],
   },
 };
-
 
 const AdvokasiIcon = () => {
   return (
@@ -59,69 +60,103 @@ const CheckListIcon = () => {
       <rect width="24" height="24" fill="none" />
       <path
         d="M9.54972 15.15L18.0247 6.675C18.2247 6.475 18.4581 6.375 18.7247 6.375C18.9914 6.375 19.2247 6.475 19.4247 6.675C19.6247 6.875 19.7247 7.1125 19.7247 7.3875C19.7247 7.6625 19.6247 7.9 19.4247 8.1L10.2497 17.3C10.0497 17.5 9.81639 17.6 9.54972 17.6C9.28305 17.6 9.04972 17.5 8.84972 17.3L4.54972 13C4.34972 12.8 4.25389 12.5625 4.26222 12.2875C4.27055 12.0125 4.37472 11.775 4.57472 11.575C4.77472 11.375 5.01222 11.275 5.28722 11.275C5.56222 11.275 5.79972 11.375 5.99972 11.575L9.54972 15.15Z"
-        fill="white"
+        fill="#BF936A"
       />
     </svg>
   );
 };
 
-const PerizinanPage = () => {
+const AdvokasiPage = () => {
   return (
     <section
-      className="h-full bg-cover bg-center bg-no-repeat relative"
+      className="h-full bg-cover bg-center relative"
       style={{
-        backgroundImage: "url('/images/bg-advokasi.jpg')",
+        // backgroundImage: "url('/images/bg-about-us.jpg')",
         minHeight: "calc(100vh - 68px)",
       }}
-      id="advokasi"
+      id="about-us"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black/80"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/90"></div> */}
 
       <Container>
-        <div className="relative z-10 flex flex-col items-center py-10 gap-8 max-w-[795px] m-auto">
-          <div className="flex flex-row gap-4">
-            <AdvokasiIcon />
-            <Typography
-              variant="h1"
-              className="text-center text-secondary md:text-left"
-            >
-              Advokasi
-            </Typography>
+        <div className="relative z-10 flex flex-col md:flex-row py-10 gap-5">
+          <div className="flex-[1.25]">
+            <Image
+              src="/images/img-advokasi.png"
+              alt="logo"
+              width={525}
+              height={537}
+              layout="responsive"
+              objectFit="cover"
+              // ratio="525/537"
 
+              // fill
+            />
           </div>
-          <Typography
-            variant="body1"
-            className="text-center text-white text-xl"
-          >
-            Dinamika dalam transaksi properti terkadang menimbulkan permasalahan
-            yang dapat merugikan salah satu pihak. Tim kami berkomitmen membantu
-            menyelesaikan sengketa properti klien dan memberikan pemahaman yang
-            komprehensif terkait permasalahan transaksi properti yang dihadapi.
-          </Typography>
-        </div>
-
-        <div className="relative z-10 flex flex-col p-6 gap-2 max-w-[795px] m-auto border-dashed border-2 border-secondary rounded-lg">
-          <Typography variant="body1" className="text-white text-left text-xl">
-            Layanan Kami meliputi:
-          </Typography>
-          {[
-            "Konsultasi permasalahan yang dihadapi klien terkait transaksi properti dan memberikan advice terbaik dari sudut pandang yang komprehensif.",
-            "Mewakili klien dalam hal penyelesaian sengketa di luar pengadilan, mulai dari pengajuan tuntutan, somasi, serta pertemuan dan negosiasi dengan pihak pengembang dalam rangka mempertahankan hak klien.",
-            "Mewakili klien dalam hal penyelesaian sengketa secara litigasi.",
-          ].map((item, index) => (
-            <div key={index} className="flex flex-row gap-2">
-              <div>
-                <CheckListIcon />
+          <div className="flex-[1.6] flex flex-col gap-4">
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-row gap-4">
+                <AdvokasiIcon />
+                <Typography
+                  variant="h1"
+                  className="text-center text-secondary md:text-left"
+                  style={{
+                    WebkitTextStroke: "1px #163359",
+                    color: "#163359", // Adjust text color
+                  }}
+                >
+                  Advokasi
+                </Typography>
               </div>
-              <Typography variant="body1" className="text-white text-xl">
-                {item}
-              </Typography>
+
+              <div className="flex flex-col gap-4">
+                <Typography
+                  variant="body1"
+                  className="text-black text-base text-justify"
+                >
+                  Dinamika dalam transaksi properti terkadang menimbulkan
+                  permasalahan yang dapat merugikan salah satu pihak. Tim kami
+                  berkomitmen membantu menyelesaikan sengketa properti klien dan
+                  memberikan pemahaman yang komprehensif terkait permasalahan
+                  transaksi properti yang dihadapi.
+                </Typography>
+              </div>
             </div>
-          ))}
+            <div className="flex flex-col gap-4">
+              <div className="relative z-10 flex flex-col gap-2 max-w-[795px] m-auto  border-dashed border-2 border-primary rounded-lg py-4 px-6 bor">
+                <Typography
+                  variant="body1"
+                  className="text-black text-left text-base font-bold"
+                >
+                  Layanan Kami meliputi:
+                </Typography>
+                {[
+                  "Konsultasi permasalahan yang dihadapi klien terkait transaksi properti dan memberikan advice terbaik dari sudut pandang yang komprehensif.",
+                  "Mewakili klien dalam hal penyelesaian sengketa di luar pengadilan, mulai dari pengajuan tuntutan, somasi, serta pertemuan dan negosiasi dengan pihak pengembang dalam rangka mempertahankan hak klien.",
+                  "Mewakili klien dalam hal penyelesaian sengketa secara litigasi.",
+                ].map((item, index) => (
+                  <div key={index} className="flex flex-row gap-2">
+                    <div>
+                      <CheckListIcon />
+                    </div>
+                    <Typography
+                      variant="body1"
+                      className="text-black text-base"
+                    >
+                      {item}
+                    </Typography>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              <WhatsappButton className="btn-sm" />
+            </div>
+          </div>
         </div>
       </Container>
     </section>
   );
 };
 
-export default PerizinanPage;
+export default AdvokasiPage;
