@@ -45,10 +45,10 @@ export default function Home() {
       <section id="service" ref={(el) => { sections.current[1] = el; }}>
         <Services />
       </section>
-      <section id="contact" ref={(el) => { sections.current[2] = el; }}>
+      <section id="our-people" ref={(el) => { sections.current[2] = el; }}>
         <AboutContact />
       </section>
-      <section id="counter" ref={(el) => { sections.current[3] = el; }}>
+      <section id="contact" ref={(el) => { sections.current[3] = el; }}>
         <Counter />
       </section>
     </>

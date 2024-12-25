@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import Container from "@/components/core/container";
 import Logo from "@/components/core/logo";
 import { MenuButton, Menu, MenuItems, MenuItem } from "@headlessui/react";
 import Link from "next/link";
-import { Fragment } from 'react';
+import { Fragment } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
@@ -13,12 +13,22 @@ const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
   const [isAtTop, setIsAtTop] = useState<boolean>(false);
-  const buttonARef = useRef<HTMLButtonElement | null>(null)
+  const buttonARef = useRef<HTMLButtonElement | null>(null);
 
   const handleSmoothScroll = (hash: string) => {
-    const element = hash ? document?.querySelector(hash) : document.documentElement;
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    const element = hash.startsWith("#")
+      ? document.querySelector(hash)
+      : document.documentElement;
+
+    if (!element) {
+      console.warn(`No element found for selector: ${hash}`);
+      return;
+    }
+
+    element.scrollIntoView({ behavior: "smooth" });
+    // Update URL without causing navigation
+    if (hash.startsWith("#")) {
+      window.history.replaceState(null, "", hash);
     }
   };
 
@@ -31,7 +41,10 @@ const Header = () => {
 
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        if (
+          rect.top <= window.innerHeight / 2 &&
+          rect.bottom >= window.innerHeight / 2
+        ) {
           foundActiveHash = `#${section.id}`;
         }
       });
@@ -46,8 +59,8 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [pathname]);
 
-  useEffect(() => { 
-    console.log(pathname)
+  useEffect(() => {
+    console.log(pathname);
     if (pathname !== "/") {
       setIsAtTop(false);
     }
@@ -56,7 +69,9 @@ const Header = () => {
   return (
     <div
       // className={`navbar bg-base-100 ${pathname === '/' ? 'fixed' : 'sticky'} top-0 z-20 transition-transform ${
-      className={`navbar bg-base-100 ${pathname === '/' ? 'fixed' : 'sticky'} top-0 z-20 transition-transform ${
+      className={`navbar bg-base-100 ${
+        pathname === "/" ? "fixed" : "sticky"
+      } top-0 z-20 transition-transform ${
         isAtTop ? "-translate-y-full" : "translate-y-0 shadow-md"
       }`}
     >
@@ -114,7 +129,7 @@ const Header = () => {
                         handleSmoothScroll(item.href);
                         setActiveHash(item.href);
                         if (buttonARef.current) {
-                          buttonARef.current.click(); 
+                          buttonARef.current.click();
                         }
                       }}
                       className={`block px-4 py-2 text-sm ${
