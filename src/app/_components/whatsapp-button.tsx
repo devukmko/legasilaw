@@ -5,10 +5,17 @@ import { whatsappClickCounter } from "@/libs/counter";
 import { clickWhatsappLink } from "@/libs/whatsapp";
 import Link from "next/link";
 import React from "react";
+import { mergeStyle } from "./../../utils/styles";
 
-const link = clickWhatsappLink()
+const link = clickWhatsappLink();
 
-const WhatsappButton = ({ text = 'Konsultasi Sekarang', className = '' }: { text?: string; className?: React.ComponentProps<'button'>['className'] }) => {
+const WhatsappButton = ({
+  text = "Konsultasi Sekarang",
+  className = "md:btn-lg",
+}: {
+  text?: string;
+  className?: React.ComponentProps<"button">["className"];
+}) => {
   const canCountClick = () => {
     const lastClickTime = localStorage.getItem("whatsapp_click_token");
     if (lastClickTime) {
@@ -30,7 +37,7 @@ const WhatsappButton = ({ text = 'Konsultasi Sekarang', className = '' }: { text
     try {
       const currentTime = Date.now();
       localStorage.setItem("whatsapp_click_token", currentTime.toString());
-      await whatsappClickCounter(); 
+      await whatsappClickCounter();
     } catch (error) {
       console.error("Error handling WhatsApp click:", error);
     } finally {
@@ -44,10 +51,17 @@ const WhatsappButton = ({ text = 'Konsultasi Sekarang', className = '' }: { text
       // rel="noopener noreferrer"
       onClick={handleClick}
       variant="contained"
-      className={"w-full xl:w-auto btn-md md:btn-lg shadow-md " + className}
-      // className="btn btn-success text-white flex items-center"
+      className={mergeStyle(
+        `w-full xl:w-auto btn-md shadow-md`,
+        className
+      )}
     >
-      <Link href={link} target="_blank" className="flex items-centerc text-lg" style={{ gap: '1.15rem', fontWeight: '600'  }} >
+      <Link
+        href={link}
+        target="_blank"
+        className="flex items-centerc text-lg"
+        style={{ gap: "1.15rem", fontWeight: "600" }}
+      >
         <svg
           width="32"
           height="32"
@@ -66,4 +80,4 @@ const WhatsappButton = ({ text = 'Konsultasi Sekarang', className = '' }: { text
   );
 };
 
-export default WhatsappButton
+export default WhatsappButton;
