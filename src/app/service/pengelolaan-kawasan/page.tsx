@@ -165,7 +165,7 @@ const KawasanPage = () => {
               </div>
             </div>
             <div>
-              <WhatsappButton className="btn-sm" />
+              <WhatsappButton className="md:btn-md" />
             </div>
           </div>
         </div>
