@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <section id="home" ref={(el) => { sections.current[0] = el; }}>
+      <section ref={(el) => { sections.current[0] = el; }}>
         <Hero />
       </section>
       <section id="service" ref={(el) => { sections.current[1] = el; }}>

@@ -92,7 +92,7 @@ const KawasanPage = () => {
       {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/90"></div> */}
 
       <Container>
-        <div className="relative z-10 flex flex-col md:flex-row py-10 gap-5">
+        <div className="relative z-10 flex flex-col md:flex-row py-4 gap-5">
           <div className="flex-[1.25]">
             <Image
               src="/images/img-kawasan.png"

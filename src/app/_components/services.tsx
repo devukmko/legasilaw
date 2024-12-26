@@ -43,10 +43,14 @@ const Services = () => {
       <Container gutter>
         <div className="gap-8 flex-col flex">
           <div className="max-w">
-            <Typography variant="h1" className="text-center md:text-left text-xl md:text-5xl">
+            <Typography variant="h1" className="text-center md:text-left text-2xl md:text-5xl"
+            style={{
+              // WebkitTextStroke: "1px #000",
+            }}
+            >
               LEGASI LAW FIRM 
             </Typography>
-            <Typography variant="subtitle" className="text-primary text-center md:text-left text-md md:text-2xl">
+            <Typography variant="subtitle" className="text-primary text-center md:text-left text-xl md:text-2xl">
               Real Estate Specialist
             </Typography>
           </div>
